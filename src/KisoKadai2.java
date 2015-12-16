@@ -7,8 +7,11 @@ public class KisoKadai2
 {
 	public static void main(String[] args)
 	{
+		System.out.println("数字当てゲーム！ランダムに決まる数字を当てようっ！");
+
 		while(true)
 		{
+
 			Random rnd = new Random();
 			int ran = rnd.nextInt(100);
 			int a = 0;

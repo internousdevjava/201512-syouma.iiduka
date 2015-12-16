@@ -75,14 +75,14 @@ public class KisoKAdai3
 										continue;
 									case 2:
 										System.out.println("ファイルに書き込みします");
-										System.out.println("[end]と入力すると終了するよ！");
+										System.out.println("[/end]と入力すると終了するよ！");
 										System.out.println("-------------------------------------------------始まり");
 										PrintWriter bw =new PrintWriter (new BufferedWriter(new FileWriter(file)));
 
 										while(true){
 										BufferedReader kaki = new BufferedReader(new InputStreamReader(System.in));
 										String kaki2 = kaki.readLine();
-											if(kaki2.equals("end")){
+											if(kaki2.equals("/end")){
 												System.out.println("-------------------------------------------------終わり");
 												break;
 											}
@@ -97,7 +97,7 @@ public class KisoKAdai3
 
 									case 3:
 										System.out.println("ファイルに追記");
-										System.out.println("[end]と入力すると終了するよ！");
+										System.out.println("[/end]と入力すると終了するよ！");
 										System.out.println("-------------------------------------------------始まり");
 
 
@@ -121,7 +121,7 @@ public class KisoKAdai3
 										BufferedReader pri = new BufferedReader(new InputStreamReader(System.in));
 										String pri2 = pri.readLine();
 
-										if(pri2.equals("end")){
+										if(pri2.equals("/end")){
 												System.out.println("-------------------------------------------------終わり");
 												break;
 											}
@@ -143,7 +143,6 @@ public class KisoKAdai3
 							}
 							else
 							{
-								System.out.println("ディレクトリは編集できません。");
 								System.out.println("メニューに戻ります！");
 								continue;
 							}

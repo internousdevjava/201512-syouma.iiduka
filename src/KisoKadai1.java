@@ -3,8 +3,8 @@ public class KisoKadai1 {
 		System.out.println("指定された範囲の九九表を出力します。");
 
 			int max = 100;
-			int x = 10;
-			int y = 10;
+			int x = 9;
+			int y = 9;
 
 			if( x  <= max)
 			{
