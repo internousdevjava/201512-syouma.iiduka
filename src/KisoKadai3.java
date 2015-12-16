@@ -8,7 +8,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.PrintWriter;
 
-public class KisoKAdai3
+public class KisoKadai3
 {
 	public static void main(String[] args)
 	{
