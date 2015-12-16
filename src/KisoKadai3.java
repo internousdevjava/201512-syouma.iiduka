@@ -74,10 +74,10 @@ public class KisoKadai3
 										System.out.println("-------------------------------------------------終わり");
 										continue;
 									case 2:
-										System.out.println("ファイルに書き込みします");
+										System.out.println("ファイルに書き込み/上書きします");
 										System.out.println("[/end]と入力すると終了するよ！");
 										System.out.println("-------------------------------------------------始まり");
-										PrintWriter bw =new PrintWriter (new BufferedWriter(new FileWriter(file)));
+										PrintWriter bw =new PrintWriter (new BufferedWriter(new FileWriter(file,false)));
 
 										while(true){
 										BufferedReader kaki = new BufferedReader(new InputStreamReader(System.in));
