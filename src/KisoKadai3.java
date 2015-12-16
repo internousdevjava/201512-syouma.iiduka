@@ -188,6 +188,7 @@ public class KisoKadai3
 									}
 									break;
 								}
+								continue;
 
 
 							case 2:
