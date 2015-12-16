@@ -38,7 +38,7 @@ public class KisoKadai3
 
 						if(file.exists())				//ファイルの存在確認
 						{
-							if(file.isFile())
+							if(file.isFile() && file.canRead())
 							{
 								System.out.println("ファイルの存在を確認しました。");
 							while(true)
@@ -191,6 +191,7 @@ public class KisoKadai3
 
 
 							case 2:
+								System.out.println("そのファイルは読み込めません。");
 								System.out.println("メニューに戻ります。");
 								continue;
 							}
