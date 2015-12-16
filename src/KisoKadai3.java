@@ -12,7 +12,7 @@ public class KisoKadai3
 {
 	public static void main(String[] args)
 	{
-		System.out.println("メニュー");
+		System.out.println("------メニュー------");
 		while(true)										//ループ開始
 		{
 			BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
@@ -29,21 +29,21 @@ public class KisoKadai3
 				case 1:
 
 					try{								//例外処理
-						System.out.println("ファイルを読み込みます。");
+						System.out.println("--ファイルを読み込みます。--");
 						BufferedReader na = new BufferedReader(new InputStreamReader(System.in));
-						System.out.println("読み込むファイルを指定してください。");
-						System.out.print("c:\\");
-						String name = "c:\\" + na.readLine();
+						System.out.println("--読み込むファイルを指定してください。--");
+						System.out.print("C:\\");
+						String name = "C:\\" + na.readLine();
 						File file = new File(name);
 
 						if(file.exists())				//ファイルの存在確認
 						{
 							if(file.isFile() && file.canRead())
 							{
-								System.out.println("ファイルの存在を確認しました。");
+								System.out.println("--ファイルの存在を確認しました。--");
 							while(true)
 							{
-									System.out.println("本日は何をしますか？");
+									System.out.println("--本日は何をしますか!?--");
 									System.out.println("1=読み込んだ内容を出力");
 									System.out.println("2=ファイルに書き込み/上書き");
 									System.out.println("3=ファイルに追記");
@@ -58,7 +58,7 @@ public class KisoKadai3
 									switch(ke2)					//作成選択肢
 									{
 									case 1:
-										System.out.println("読み込んだ内容を出力します");
+										System.out.println("--読み込んだ内容を出力します--");
 										System.out.println("-------------------------------------------------始まり");
 										BufferedReader ch = new BufferedReader(new FileReader(file));
 
@@ -74,8 +74,8 @@ public class KisoKadai3
 										System.out.println("-------------------------------------------------終わり");
 										continue;
 									case 2:
-										System.out.println("ファイルに書き込み/上書きします");
-										System.out.println("[/end]と入力すると終了するよ！");
+										System.out.println("--ファイルに書き込み/上書きします--");
+										System.out.println("--[/end]と入力すると終了するよ！--");
 										System.out.println("-------------------------------------------------始まり");
 										PrintWriter bw =new PrintWriter (new BufferedWriter(new FileWriter(file,false)));
 
@@ -96,8 +96,8 @@ public class KisoKadai3
 
 
 									case 3:
-										System.out.println("ファイルに追記");
-										System.out.println("[/end]と入力すると終了するよ！");
+										System.out.println("--ファイルに追記--");
+										System.out.println("--[/end]と入力すると終了するよ！--");
 										System.out.println("-------------------------------------------------始まり");
 
 
@@ -133,7 +133,7 @@ public class KisoKadai3
 
 										continue;
 									case 4:
-										System.out.println("ファイル選択に戻ります。");
+										System.out.println("--ファイル選択に戻ります。--");
 										System.out.println("さよならー");
 
 										break;
@@ -143,14 +143,14 @@ public class KisoKadai3
 							}
 							else
 							{
-								System.out.println("メニューに戻ります！");
+								System.out.println("--メニューに戻ります！--");
 								continue;
 							}
 							}else							//ない場合の作成確認
 							{
-								System.out.println("ファイルの存在を確認できません。");
-								System.out.println("ディレクトリを指定した可能性があります。");
-								System.out.println("ファイルorフォルダを作成しますか？1=yes 2=no");
+								System.out.println("--ファイルの存在を確認できません。--");
+								System.out.println("--ディレクトリを指定した可能性があります。--");
+								System.out.println("--ファイルorフォルダを作成しますか？1=yes 2=no--");
 								BufferedReader ma = new BufferedReader(new InputStreamReader(System.in));
 								String make = ma.readLine();
 								int ke = Integer.parseInt(make);
@@ -160,7 +160,7 @@ public class KisoKadai3
 
 
 
-								System.out.println("どちらを作成しますか？1=ファイル 2=ディレクトリ");
+								System.out.println("--どちらを作成しますか？1=ファイル 2=ディレクトリ--");
 								BufferedReader mk = new BufferedReader(new InputStreamReader(System.in));
 								String mkk = mk.readLine();
 								int mkkk = Integer.parseInt(mkk);
@@ -169,10 +169,10 @@ public class KisoKadai3
 								case 1:						//ファイルの作成
 									if( file.createNewFile())
 									{
-										System.out.println("ファイルの作成に成功しました。");
+										System.out.println("--ファイルの作成に成功しました。--");
 									}else
 									{
-										System.out.println("ファイルの作成に失敗しました。");
+										System.out.println("--ファイルの作成に失敗しました。--");
 									}
 									break;
 
@@ -181,10 +181,10 @@ public class KisoKadai3
 								case 2:						//ディレクトリの作成
 									if( file.mkdir())
 									{
-										System.out.println("ディレクトリの作成に成功しました。");
+										System.out.println("--ディレクトリの作成に成功しました。--");
 									}else
 									{
-										System.out.println("同じディレクトリが存在します！");
+										System.out.println("--同じディレクトリが存在します！--");
 									}
 									break;
 								}
@@ -192,8 +192,8 @@ public class KisoKadai3
 
 
 							case 2:
-								System.out.println("そのファイルは読み込めません。");
-								System.out.println("メニューに戻ります。");
+								System.out.println("--そのファイルは読み込めません。--");
+								System.out.println("--メニューに戻ります。--");
 								continue;
 							}
 							if( ke == 2){					//脱出路
@@ -203,23 +203,23 @@ public class KisoKadai3
 					}catch(FileNotFoundException e){		//おまじない
 					}
 				case 2:
-					System.out.println("削除するファイル/ディレクトリを指定してください。（中身がある場合はできません）");
+					System.out.println("--削除するファイル/ディレクトリを指定してください。（中身がある場合はできません）--");
 					BufferedReader ri = new BufferedReader(new InputStreamReader(System.in));
-					System.out.print("c:\\");
-					String riname = "c:\\" + ri.readLine();
+					System.out.print("C:\\");
+					String riname = "C:\\" + ri.readLine();
 					File rifile = new File(riname);
 
 					if(rifile.exists()){
-						System.out.println("ファイルを削除してよろしいでしょうか？ 1=yes 2=no");
+						System.out.println("--ファイルを削除してよろしいでしょうか？ 1=yes 2=no--");
 						BufferedReader de = new BufferedReader(new InputStreamReader(System.in));
 						String dee = de.readLine();
 						int deee = Integer.parseInt(dee);
 						if(deee == 1){
 
 							if( rifile.delete()){
-								System.out.println("ファイルを削除しました。");
+								System.out.println("--ファイルを削除しました。--");
 							}else{
-								System.out.println("ファイルの削除に失敗しました。");
+								System.out.println("--ファイルの削除に失敗しました。--");
 							}
 
 							continue;
@@ -228,24 +228,24 @@ public class KisoKadai3
 							break;
 						}
 					}else{
-						System.out.println("ファイルが見つかりません。");
+						System.out.println("--ファイルが見つかりません。--");
 						continue;
 					}
 
 
 
-				case 3:System.out.println("終了します。");
+				case 3:System.out.println("--終了します。--");
 				System.exit(0);								//終了宣言
 
 
-				default:System.err.println("１～２までの数字で入力してください。");
+				default:System.err.println("--１～２までの数字で入力してください。--");
 				}
 
 
 			}catch(IOException e){							//おまじない
-				System.err.println("このディレクトリは指定できないか、[.txt]になっていません。");
+				System.err.println("--このディレクトリは指定できません。--");
 			}catch(NumberFormatException e){				//おまじない
-				System.err.println("数字を入れてください！！");
+				System.err.println("--数字を入れてください！！--");
 			}
 		}
 	}
