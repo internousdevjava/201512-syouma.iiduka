@@ -18,13 +18,13 @@ public class KisoKadai1 {
 		String str2= br2.readLine();
 		int yt =Integer.parseInt(str2);
 
-			int max = 100;
+			int max = 10000;
 			int x = xt;
 			int y = yt;
 
 			if( x * y  <= max)
 			{
-
+				if( x * y != 0){
 				for(int i = 1 ; i <= x ; i++ )
 				{
 					for(int k = 1 ; k <= y ; k++)
@@ -33,9 +33,12 @@ public class KisoKadai1 {
 					}
 					System.out.println("");
 				}
-				}
-				else{
+				}else{
+					System.out.println("0は入力できません。");
+
+				}}else{
 					System.out.println( max + "以上は計算できません。");
+
 				}
 
 
