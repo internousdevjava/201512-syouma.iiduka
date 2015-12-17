@@ -150,7 +150,7 @@ public class KisoKadai3
 							{
 								System.out.println("--ファイルの存在を確認できません。--");
 								System.out.println("--ディレクトリを指定した可能性があります。--");
-								System.out.println("--ファイルorフォルダを作成しますか？1=yes 2=no--");
+								System.out.println("--ファイルorディレクトリを作成しますか？1=yes 2=no--");
 								BufferedReader ma = new BufferedReader(new InputStreamReader(System.in));
 								String make = ma.readLine();
 								int ke = Integer.parseInt(make);
