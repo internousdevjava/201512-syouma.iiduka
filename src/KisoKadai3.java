@@ -244,7 +244,7 @@ public class KisoKadai3
 
 			}catch(IOException e){							//おまじない
 				System.err.println("--このディレクトリは指定できません。--");
-				System.err.println("又はUACの影響でc直下にはファイルを作成できません。");
+				System.err.println("UACの影響でc直下にはファイルを作成できません。");
 			}catch(NumberFormatException e){				//おまじない
 				System.err.println("--数字を入れてください！！--");
 			}
