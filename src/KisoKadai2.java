@@ -39,8 +39,8 @@ public class KisoKadai2
 				{
 					System.err.println("100以下で入力してください。");
 					continue;
-				}else if( e == 0){
-					System.out.println("0は入力できません。");
+				}else if( e < 1){
+					System.out.println("1以上で入力してください");
 					continue;
 				}else if( ran > e )
 				{
